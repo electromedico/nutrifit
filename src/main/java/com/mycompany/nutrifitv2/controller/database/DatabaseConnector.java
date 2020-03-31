@@ -21,7 +21,7 @@ public class DatabaseConnector {
          
     }
     
-   public void connect() throws SQLException {
+   public void getConnection() throws SQLException {
        try{
            connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=admin");
        }catch(SQLException ex){
