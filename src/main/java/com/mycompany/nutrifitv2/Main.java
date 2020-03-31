@@ -23,7 +23,7 @@ public class Main {
         try {
             // TODO code application logic here
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            new DatabaseConnector().connect();
+            new DatabaseConnector().connect();  
                            
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

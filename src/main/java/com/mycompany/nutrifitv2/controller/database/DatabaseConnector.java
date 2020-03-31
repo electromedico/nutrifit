@@ -22,7 +22,19 @@ public class DatabaseConnector {
     }
     
    public void connect() throws SQLException {
-       connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=admin");
+       try{
+           connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=admin");
+       }catch(SQLException ex){
+        // handle any errors
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            
+            throw ex;
+            
+       }
+       
+       
    }
     
     
