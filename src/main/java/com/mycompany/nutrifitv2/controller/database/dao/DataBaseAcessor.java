@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.nutrifitv2.controller.dao;
+package com.mycompany.nutrifitv2.controller.database.dao;
 
 /**
  *
