@@ -5,31 +5,39 @@
  */
 package com.mycompany.nutrifitv2.controller.database.dao;
 
+import com.mycompany.nutrifitv2.controller.database.DatabaseConnector;
 import com.mycompany.nutrifitv2.model.Paciente;
+import java.sql.Connection;
 
 /**
  *
  * @author elect
  */
 public class PacienteDAO implements DataBaseAcessor<Paciente>{
+    
+    private Connection connection;
 
+    public PacienteDAO(Connection connection) {
+        this.connection = connection;
+    } 
+    
     @Override
-    public int Create() {
+    public int create(Paciente t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public Paciente read(int key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public Paciente update(Paciente t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Paciente Read() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Paciente Update() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean Delete() {
+    public boolean delete(int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

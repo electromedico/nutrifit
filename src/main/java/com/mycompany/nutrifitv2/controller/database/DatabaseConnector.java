@@ -15,15 +15,10 @@ import java.sql.SQLException;
  */
 public class DatabaseConnector {
 
-    private Connection connection;
-
-    public DatabaseConnector() {
-         
-    }
-    
-   public void getConnection() throws SQLException {
+   public static Connection getConnection() throws SQLException {
        try{
-           connection = DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=admin");
+          return DriverManager.getConnection("jdbc:mysql://localhost/test?user=root&password=admin");
+          
        }catch(SQLException ex){
         // handle any errors
             System.out.println("SQLException: " + ex.getMessage());
@@ -33,7 +28,6 @@ public class DatabaseConnector {
             throw ex;
             
        }
-       
        
    }
     

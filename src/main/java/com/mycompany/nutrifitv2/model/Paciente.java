@@ -11,4 +11,10 @@ package com.mycompany.nutrifitv2.model;
  */
 public class Paciente {
     
+    String nombre;
+    String Apeido;
+    String Direccion;
+    String estadoCivil;
+    
+    
 }

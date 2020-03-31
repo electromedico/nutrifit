@@ -5,15 +5,17 @@
  */
 package com.mycompany.nutrifitv2.controller.database.dao;
 
+import java.sql.Connection;
+
 /**
  *
  * @author elect
  */
 public interface DataBaseAcessor<T> {
     
-    int Create();
-    T Read();
-    T Update();
-    boolean Delete();
+    int create(T t);
+    T read(int key);
+    T update(T t);
+    boolean delete(int key);
     
 }
