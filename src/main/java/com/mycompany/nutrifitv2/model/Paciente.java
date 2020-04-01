@@ -15,6 +15,11 @@ public class Paciente {
     String Apeido;
     String Direccion;
     String estadoCivil;
+    String NoCelular;
+    String fechaNa;
+    String lugarNa;
+    String ocupacion;
+    
     
     
 }

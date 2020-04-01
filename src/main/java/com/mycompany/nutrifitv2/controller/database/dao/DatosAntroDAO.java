@@ -4,33 +4,34 @@
  * and open the template in the editor.
  */
 package com.mycompany.nutrifitv2.controller.database.dao;
-import java.sql.Connection;
 import com.mycompany.nutrifitv2.controller.database.DatabaseConnector;
-import com.mycompany.nutrifitv2.model.CitaSub;
+import com.mycompany.nutrifitv2.model.DatosAntro;
+import java.sql.Connection;
 
 /**
  *
  * @author toro_
  */
-public class CitaSubDAO implements DataBaseAcessor<CitaSub>{
-
+public class DatosAntroDAO implements DataBaseAcessor<DatosAntro>{
+    
     private Connection connection;
 
-    public CitaSubDAO(Connection connection) {
+    public DatosAntroDAO(Connection connection) {
         this.connection = connection;
     } 
+
     @Override
-    public int create(CitaSub t) {
+    public int create(DatosAntro t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public CitaSub read(int key) {
+    public DatosAntro read(int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public CitaSub update(CitaSub t) {
+    public DatosAntro update(DatosAntro t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
