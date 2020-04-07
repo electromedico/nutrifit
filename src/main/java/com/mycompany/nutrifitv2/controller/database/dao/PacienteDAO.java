@@ -8,6 +8,9 @@ package com.mycompany.nutrifitv2.controller.database.dao;
 import com.mycompany.nutrifitv2.controller.database.DatabaseConnector;
 import com.mycompany.nutrifitv2.model.Paciente;
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,8 +25,38 @@ public class PacienteDAO implements DataBaseAcessor<Paciente>{
     } 
     
     @Override
-    public int create(Paciente t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int create(Paciente t){
+    String query="";  
+    
+        try {
+            connection.createStatement();
+            query="INSERT INTO paciente(idpaciente, " + "nombre, " +
+                    "apeido, " + "direccion, " + "estadocivil," + 
+                    "nocelular, " + "fechana, " + "lugarna, " +
+                    "ocupacion,"+"antecedentehf,"+"antecendetepp,"+
+                    "alegias,"+"adiccion,"+"enfermedada,"+"medicamente,"+
+                    "motivo,"+"horadespertar,"+"horadormir,"+"horatrabajo"+
+                    "actividadfisica,"+"comidasdias,"+"horaprimercomida,"+
+                    "quienhace,"+ "dondecome,"+"gestacion,"+"fecha"+") "
+                    + "VALUES('"+ t.getId() + "', " + t.getNombre() +  "', "+
+                    t.getApeido() + "', " +t.getDireccion() + "', " + t.getEstadoCivil() + "', "+
+                    t.getNoCelular() + "', "+ t.getFechaNa()+ "', "+ t.getLugarNa()+ "', "+
+                    t.getOcupacion()+  "', "+ t.getAntecedentesHF()+ "', "+t.getAntecedentesPP()+ "', "+
+                    t.getAlergias()+  "', "+ t.getAdiccion() + "', " + t.getEnfermedadA()+ "', " + t.getMedicamento()+ "', " +
+                    t.getMotivo() + "', " + t.getHoraDespertar() + "', " + t.getHoraDormir() + "', " + t.getHoraTrabajo() + "', " +
+                    t.getActividadfisica() + "', " +t.getComidasDia() + "', " + t.getHoraprimercomida() + "', " +
+                    t.getQuienhace() + "', " + t.getDondecome() + "', " + t.getGestacion() + "', " + t.getFecha()+")";
+                    
+   
+                    
+                    
+                    
+        } catch (SQLException ex) {
+            Logger.getLogger(PacienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    
+   
     }
     
     @Override
